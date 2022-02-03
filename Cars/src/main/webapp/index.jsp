@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>TESTTESTTEST</title>
+<title>THIS IS A TEST OF PULL AND PUSH</title>
 </head>
 <body>
 <h1>Hello JSP and Servlet!</h1>
