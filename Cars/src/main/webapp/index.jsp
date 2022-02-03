@@ -8,7 +8,7 @@
 </head>
 <body>
 <<<<<<< HEAD
-<h1>Hello JSP JSP JSP JSP and Servlet!</h1>
+<h1>Hello JSP and friends and Servlet!</h1>
 =======
 <h1>Hello JSP and Servlet!testing</h1>
 >>>>>>> branch 'main' of https://github.com/Seth1808/CarTech
