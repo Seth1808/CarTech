@@ -4,14 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>CHANGE</title>
+<title>abcd</title>
 </head>
 <body>
-<<<<<<< HEAD
 <h1>Hello JSP and friends and Servlet!</h1>
-=======
-<h1>Hello JSP and Servlet!testing</h1>
->>>>>>> branch 'main' of https://github.com/Seth1808/CarTech
 <!-- Create a form with the action attribute to specific where to send the form-data when
 the form is submitted, method attribute to specific the method used (GET, POST, PUT, DELETE,
 Etc.) -->
