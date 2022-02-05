@@ -32,7 +32,7 @@
 						<th>Actions</th>
 					</tr>
 				</thead>
-				<!-- Pass in the list of users receive via the Servlet’s response to a loop -->
+				<!-- Pass in the list of cars receive via the Servlet’s response to a loop -->
 				<tbody>
 					<c:forEach var="car" items="${listCars}">
 						<!-- For each user in the database, display their information accordingly -->
