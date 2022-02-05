@@ -63,16 +63,16 @@ public class RegCarServlet extends HttpServlet {
 		String action = request.getServletPath();
 		try {
 			switch (action) {
-			case "/UserServlet/deleteCar":
+			case "/RegCarServlet/deleteCar":
 				deleteCar(request, response);
 				break;
-			case "/UserServlet/editCar":
+			case "/RegCarServlet/editCar":
 				showEditForm(request, response);
 				break;
-			case "/UserServlet/updateCar":
+			case "/RegCarServlet/updateCar":
 				updateCar(request, response);
 				break;
-			case "/UserServlet/dashboardCar":
+			case "/RegCarServlet/dashboardCar":
 				listCars(request, response);
 				break;
 			}
