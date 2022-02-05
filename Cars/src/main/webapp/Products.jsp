@@ -8,10 +8,10 @@
 </head>
 <body>
 <form action="ProductAddServlet" method="post">
-     image<input type="text" name="Image link">
-     name<input type="text" name="Propduct name">
-     description<input type="text" name="Description">
-     price<input type="text" name="Product price">
+     Name<input type="text" name="name">
+     Description<input type="text" name="description">
+     Price<input type="text" name="price">
+     Specs<input type="text" name="specs">
      <input type="submit" value="Add Product"/>
 </form>
 </body>

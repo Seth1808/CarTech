@@ -45,10 +45,10 @@ public class ProductAddServlet extends HttpServlet {
 		//Step 1: Initialize a PrintWriter object to return the html values via the response
 		PrintWriter out = response.getWriter();
 		//Step 2: retrieve the four parameters from the request from the web form
-		String a = request.getParameter("image");
-		String b = request.getParameter("name");
-		String c = request.getParameter("description");
-		String d = request.getParameter("price");
+		String a = request.getParameter("name");
+		String b = request.getParameter("description");
+		String c = request.getParameter("price");
+		String d = request.getParameter("specs");
 		
 		//Step 3: attempt connection to database using JDBC, you can change the username and password accordingly using the phpMyAdmin > User Account dashboard
 		try {
