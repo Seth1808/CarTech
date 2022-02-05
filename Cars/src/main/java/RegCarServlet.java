@@ -62,6 +62,7 @@ public class RegCarServlet extends HttpServlet {
 		// invoke using the follow switch statement.
 		String action = request.getServletPath();
 		try {
+			//test
 			switch (action) {
 			case "/RegCarServlet/deleteCar":
 				deleteCar(request, response);
