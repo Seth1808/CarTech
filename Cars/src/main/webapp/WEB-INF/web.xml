@@ -4,6 +4,7 @@
    <servlet>
  <servlet-name>ContactServlet</servlet-name>
  <servlet-class>ContactServlet</servlet-class>
+ 
  </servlet>
 
  <servlet-mapping>
@@ -21,4 +22,6 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  
 </web-app>
