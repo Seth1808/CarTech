@@ -67,7 +67,7 @@ public class ProductAddServlet extends HttpServlet {
 		
 		if (i > 0){
 			PrintWriter writer = response.getWriter();
-			writer.println("<h1>" + "You have successfully registered an Product!" +
+			writer.println("<h1>" + "You have successfully registered a Product!" +
 			"</h1>");
 			writer.close();
 			}
