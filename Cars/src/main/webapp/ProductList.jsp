@@ -1,9 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="utf-8" />
 <title>Insert title here</title>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <link rel="stylesheet"
@@ -37,9 +35,9 @@
 							<td><c:out value="${ProductList.description}" /></td>
 							<td><c:out value="${ProductList.price}" /></td>
 							<td><c:out value="${ProductList.specs}" /></td>
-							<td><a href="edit?name=<c:out value='${products.name}'/>">Edit</a>
+							<td><a href="edit?name=<c:out value='${ProductList.name}'/>">Edit</a>
 								&nbsp;&nbsp;&nbsp;&nbsp; 
-						     <a href="delete?name=<c:out value='${products.name}' />">Delete</a></td>
+						     <a href="delete?name=<c:out value='${ProductList.name}' />">Delete</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

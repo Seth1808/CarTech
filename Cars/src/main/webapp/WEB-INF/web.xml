@@ -1,44 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
-  <display-name>Cars</display-name>
-   <servlet>
- <servlet-name>ContactServlet</servlet-name>
- <servlet-class>ContactServlet</servlet-class>
- 
- </servlet>
- 
-  <servlet>
-  
- <servlet-name>RegCarServlet</servlet-name>
- <servlet-class>RegCarServlet</servlet-class>
- 
- </servlet>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+	<display-name>Cars</display-name>
+	<servlet>
+		<servlet-name>ContactServlet</servlet-name>
+		<servlet-class>ContactServlet</servlet-class>
 
- <servlet-mapping>
- <servlet-name>ContactServlet</servlet-name>
-<url-pattern>/ContactServlet/dashboard</url-pattern>
- <url-pattern>/ContactServlet/edit</url-pattern>
- <url-pattern>/ContactServlet/update</url-pattern>
- <url-pattern>/ContactServlet/delete</url-pattern>
- </servlet-mapping>
- 
- <servlet-mapping>
- <servlet-name>RegCarServlet</servlet-name>
-<url-pattern>/RegCarServlet/dashboardCar</url-pattern>
- <url-pattern>/RegCarServlet/editCar</url-pattern>
- <url-pattern>/RegCarServlet/updateCar</url-pattern>
- <url-pattern>/RegCarServlet/deleteCar</url-pattern>
- </servlet-mapping>
- 
- 
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
-  </welcome-file-list>
-  
-  
+	</servlet>
+
+	<servlet>
+
+		<servlet-name>RegCarServlet</servlet-name>
+		<servlet-class>RegCarServlet</servlet-class>
+
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ContactServlet</servlet-name>
+		<url-pattern>/ContactServlet/dashboard</url-pattern>
+		<url-pattern>/ContactServlet/edit</url-pattern>
+		<url-pattern>/ContactServlet/update</url-pattern>
+		<url-pattern>/ContactServlet/delete</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>RegCarServlet</servlet-name>
+		<url-pattern>/RegCarServlet/dashboardCar</url-pattern>
+		<url-pattern>/RegCarServlet/editCar</url-pattern>
+		<url-pattern>/RegCarServlet/updateCar</url-pattern>
+		<url-pattern>/RegCarServlet/deleteCar</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ProductListServlet</servlet-name>
+		<servlet-class>ProductListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductListServlet</servlet-name>
+		<url-pattern>/ProductListServlet/dashboard</url-pattern>
+		<url-pattern>/ProductListServlet/edit</url-pattern>
+		<url-pattern>/ProductListServlet/update</url-pattern>
+		<url-pattern>/ProductListServlet/delete</url-pattern>
+	</servlet-mapping>
+
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+
 </web-app>
