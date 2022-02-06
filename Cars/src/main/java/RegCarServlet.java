@@ -31,10 +31,10 @@ public class RegCarServlet extends HttpServlet {
 	// database
 	private static final String INSERT_CARS_SQL = "INSERT INTO RegisteredCars"
 			+ " (carModel, licensePlate, warranty) VALUES " + " (?, ?, ?);";
-	private static final String SELECT_CAR_BY_ID = "select carModel,licensePlate,warranty from RegisteredCars where carModel =?";
+	private static final String SELECT_CAR_BY_ID = "select carModel,licensePlate,warranty from registeredcars where carModel =?";
 	private static final String SELECT_ALL_CARS = "select * from RegisteredCars ";
-	private static final String DELETE_CARS_SQL = "delete from RegisteredCars where carModel = ?;";
-	private static final String UPDATE_CARS_SQL = "update RegisteredCars set carModel = ?,licensePlate= ?, warranty =? where carModel = ?;";
+	private static final String DELETE_CARS_SQL = "delete from RegisteredCars where car_model = ?;";
+	private static final String UPDATE_CARS_SQL = "update RegisteredCars set carModel = ?,licensePlate= ?, warranty =? where car_model = ?;";
 
 	// Step 3: Implement the getConnection method which facilitates connection to
 	// the database via JDBC
@@ -98,8 +98,8 @@ public class RegCarServlet extends HttpServlet {
 			// Step 5.3: Process the ResultSet object.
 			while (rs.next()) {
 
-				String carModel = rs.getString("carModel");
-				String licensePlate = rs.getString("licensePlate");
+				String carModel = rs.getString("car_model");
+				String licensePlate = rs.getString("license_plate");
 				String warranty = rs.getString("warranty");
 				cars.add(new RegisteredCars(carModel, licensePlate, warranty));
 
@@ -123,7 +123,7 @@ public class RegCarServlet extends HttpServlet {
 			throws SQLException, ServletException, IOException {
 
 		// get parameter passed in the URL
-		String carModel = request.getParameter("carModel");
+		String carModel = request.getParameter("car_model");
 
 		RegisteredCars existingCar = new RegisteredCars("", "", "");
 
@@ -141,8 +141,8 @@ public class RegCarServlet extends HttpServlet {
 			// Step 4: Process the ResultSet object
 			while (rs.next()) {
 
-				carModel = rs.getString("carModel");
-				String licensePlate = rs.getString("licensePlate");
+				carModel = rs.getString("car_model");
+				String licensePlate = rs.getString("license_plate");
 				String warranty = rs.getString("warranty");
 				existingCar = new RegisteredCars(carModel, licensePlate, warranty);
 
@@ -151,17 +151,17 @@ public class RegCarServlet extends HttpServlet {
 			System.out.println(e.getMessage());
 		}
 		// Step 5: Set existingUser to request and serve up the userEdit form
-		request.setAttribute("user", existingCar);
-		request.getRequestDispatcher("/userEdit.jsp").forward(request, response);
+		request.setAttribute("car", existingCar);
+		request.getRequestDispatcher("/carEdit.jsp").forward(request, response);
 	}
 
 	// method to update the user table base on the form data
 	private void updateCar(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
 
 		// Step 1: Retrieve value from the request
-		String oricarModel = request.getParameter("oricarModel");
-		String carModel = request.getParameter("carModel");
-		String licensePlate = request.getParameter("licensePlate");
+		String oricarModel = request.getParameter("oricar_model");
+		String carModel = request.getParameter("car_model");
+		String licensePlate = request.getParameter("license_plate");
 		String warranty = request.getParameter("warranty");
 		
 
@@ -179,14 +179,14 @@ public class RegCarServlet extends HttpServlet {
 
 		// Step 3: redirect back to UserServlet (note: remember to change the url to
 		// your project name)
-		response.sendRedirect("http://localhost:8090/HelloWorldJavaEE/UserServlet");
+		response.sendRedirect("http://localhost:8091/Cars/RegCarServlet");
 	}
 
 	// method to delete car
 	private void deleteCar(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException {
 		
 		// Step 1: Retrieve value from the request
-		String carModel = request.getParameter("carModel");
+		String carModel = request.getParameter("car_model");
 		
 		// Step 2: Attempt connection with database and execute delete car SQL query
 		try (Connection connection = getConnection();
@@ -198,7 +198,7 @@ public class RegCarServlet extends HttpServlet {
 		}
 		
 		// Step 3: redirect back to UserServlet dashboard 
-		response.sendRedirect("http://localhost:8090/HelloWorldJavaEE/UserServlet/dashboard");
+		response.sendRedirect("http://localhost:8091/Cars/RegCarServlet/dashboardCar");
 	}
 
 }
