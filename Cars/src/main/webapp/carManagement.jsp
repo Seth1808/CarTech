@@ -41,9 +41,9 @@
 							<td><c:out value="${car.licensePlate}" /></td>
 							<td><c:out value="${car.warranty}" /></td>
 							<!-- For each user in the database, Edit/Delete buttons which invokes the edit/delete functions -->
-							<td><a href="edit?carModel=<c:out value='${car.carModel}' />">Edit</a>
+							<td><a href="editCar?car_model=<c:out value='${car.carModel}' />">Edit</a>
 								&nbsp;&nbsp;&nbsp;&nbsp; <a
-								href="delete?carModel=<c:out value='${car.carModel}' />">Delete</a></td>
+								href="deleteCar?car_model=<c:out value='${car.carModel}' />">Delete</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>
