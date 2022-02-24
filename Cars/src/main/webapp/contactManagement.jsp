@@ -13,7 +13,7 @@ crossorigin="anonymous">
 </head>
 
 <body>
-<div id="content" class="row">
+<div id="content" role="contentinfo" class="row">
 <div class="container">
 <h3 class="text-center">List of Staff Contacts</h3>
 <hr>
