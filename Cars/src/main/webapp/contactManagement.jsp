@@ -53,7 +53,7 @@ crossorigin="anonymous">
 </td>
 
 <td>
-<a href="edit?name=<c:out value='${contact.name}'/>">Edit</a>
+<a class="link" href="edit?name=<c:out value='${contact.name}'/>">Edit</a>
  &nbsp;&nbsp;&nbsp;&nbsp;
 <a href="delete?name=<c:out value='${contact.name}'/>">Delete</a>
 </td>
