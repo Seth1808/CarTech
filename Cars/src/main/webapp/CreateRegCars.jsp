@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<h1>HELLO</h1>
+
 
 	<form action="RegCarCreateServlet" method="post">
 		Car Model: <input type="text" name="carModel"> 
