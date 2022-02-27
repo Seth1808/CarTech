@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<h1>HELLO</h1>
+<h1>HELLO Testing</h1>
 
 
 	<form action="RegCarCreateServlet" method="post">
